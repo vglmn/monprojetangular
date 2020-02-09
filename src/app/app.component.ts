@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mon-projet-angular';
+  isAuth = false;
+  
+  appareilUn = 'Lampe';
+  appareilDeux = 'Tamagotchi';
+  appareilTrois = 'Réacteur nucléaire';
+
+  //Faire que le button s'active après 4 secondes, en changeant le isAuth en true
+  constructor() {
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }, 4000
+    );
+  }
+  onAllumer() {
+    console.log('Tout est allumé.');
+}
 }
