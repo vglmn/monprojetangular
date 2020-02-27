@@ -7,11 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  lastUpdate = new Date();
   
-  appareilUn = 'Lampe';
-  appareilDeux = 'Tamagotchi';
-  appareilTrois = 'Réacteur nucléaire';
+  appareils = [
+    {
+      name: 'Ordinateur',
+      status: 'éteint'
+    },
+    {
+      name: 'Lampe',
+      status: 'allumé'
+    },
+    {
+      name: 'Telephone',
+      status: 'inconnu'
+    }
+  ];
 
+ 
   //Faire que le button s'active après 4 secondes, en changeant le isAuth en true
   constructor() {
     setTimeout(
